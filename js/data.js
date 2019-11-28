@@ -1,3 +1,5 @@
+"use strict";
+
 const account = [
     { month: 0, income: 150 },
     { month: 1, income: 200, expense: 50 },
@@ -13,4 +15,33 @@ const account = [
     { month: 12, expense: 200 }
 ];
 
+
+
 const months = ['Sausis', 'Vasaris', 'Kovas', 'Balandis', 'Gegužė', 'Birželis', 'Liepa', 'Rugpjūtis', 'Rugsėjis', '	Spalis', 'Lapkritis', 'Gruodis'];
+let HTML = '';
+const DOM = document.querySelector('#years');
+
+ function renderTable ( list ) {
+     
+    for ( let i=0; i<list.length; i++) {
+        const account = list[i];
+
+        
+        }
+
+    // Generuojame visa lentele
+    HTML += `<div class="table">
+        <div class="table-head">
+            <div class="cell">${account.month}</div>
+            <div class="cell">${months[i]}</div>
+            <div class="cell">${account.income}</div>
+            <div class="cell">${account.expense}</div>
+            <div class="cell">Balansas</div>
+        </div>`
+    
+        DOM.innerHTML = HTML;
+    }
+ return;
+ }
+
+ renderTable ( account );
